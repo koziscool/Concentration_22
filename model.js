@@ -8,6 +8,9 @@ matcherModel = {
 	cardValues: [ "A", "B", "C", "D", "E", "F", "G", "H" ],
 
 	totalCards: 0,
+	numGuesses: 0,
+	matchedCards: 0,
+	gameStateText: "You have won yet, pick two cards.",
 
 	currentId: 1,
 	selectedCard: null,

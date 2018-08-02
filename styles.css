@@ -51,5 +51,16 @@
 	text-align: center;
 }
 
+.revealed{
+	transform: rotateY(0deg);
+}
 
+.revealed .name {
+	transform: translateY(60%) rotateY(0deg);
+}
+
+.correct{
+	background-color: lime;
+	border-color: darkgreen;
+}
 

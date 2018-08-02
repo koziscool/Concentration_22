@@ -21,7 +21,7 @@ matcherView = {
 			var card = this.model.cards[i];
 			var $cardDiv = $('<div><div class="name">' + card.value  + '</div></div>');
 			$cardDiv.addClass("card");
-			$cardDiv.data('card-' + card.id );
+			$cardDiv.data('card-id', card.id );
 			$cardDiv.attr('id', 'card-' + card.id);
 			this.$grid.append($cardDiv);
 		}
@@ -31,5 +31,21 @@ matcherView = {
 	},
 
 	addClickHandlers: function( fn, context ){
+		$('.card').click( function(){
+			fn.call( context, $(this).data('card-id') );
+		});
+	},
+
+	revealCard: function(id){
+		$('#card-' + id).addClass('revealed');
+	},
+
+
+	setCorrect: function(id){
+		$('#card-' + id).addClass('correct');
+	},
+
+	hideCards: function(){
+		$('.card').not('.correct').removeClass('revealed');
 	},
 };

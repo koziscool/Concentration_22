@@ -27,3 +27,29 @@
 	margin: 0 auto;
 }
 
+.grid-container{
+	width: 80%;
+	margin: 0 auto;
+}
+
+.card{
+	height: 60px;
+	background-color: lightyellow;
+	margin: 1%;
+	border: 1px solid black;
+	box-sizing: border-box;
+	transition: 0.5s all;
+	transform: rotateY(180deg);
+	display: inline-block;
+}
+
+.name {
+	font-size:large;
+	backface-visibility: hidden;
+	transition: 0.5s all;
+	transform: translateY(60%) rotateY(180deg);
+	text-align: center;
+}
+
+
+
